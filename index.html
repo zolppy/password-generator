@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Generator</title>
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+  <!-- Bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <!-- Reset de estilos -->
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <!-- Meus arquivos-fonte -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <main>
+    <div id="container">
+      <h1 id="title">Gerador de senhas</h1>
+      <div id="input-container">
+        <div id="password-length-container">
+          <label for="password-length-input">Total de caracteres:</label>
+          <input type="number" id="password-length-input" min="4" max="32" value="4" />
+        </div>
+        <div id="password-type-container">
+          <label for="password-type-select">Tipo da senha:</label>
+          <select id="password-type-select">
+            <option value="" selected>Escolha uma opção</option>
+            <option value="letters">Somente letras</option>
+            <option value="numbers">Somente números</option>
+            <option value="special-caracters">Somente caracteres especiais</option>
+            <option value="letters-and-numbers">Letras e números</option>
+            <option value="letters-and-special-caracters">Letras e caracteres especiais</option>
+            <option value="numbers-and-special-caracters">Números e caracteres especiais</option>
+            <option value="all">Todos</option>
+          </select>
+        </div>
+        <div id="generated-password-container" class="hide">
+          <label for="generated-password-input">Senha gerada:</label>
+          <input type="text" id="generated-password-input" />
+          <button type="button" id="copy-button">
+            <i class="bi bi-copy"></i>
+          </button>
+        </div>
+        <button type="button" id="generate-button">Gerar</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
