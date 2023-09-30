@@ -148,7 +148,8 @@ const getPasswordLength = () => {
   const MAX = passwordLengthInput.getAttribute('max');
   let passwordLength = passwordLengthInput.value;
 
-  if (passwordLength < MIN || passwordLength > MAX) {
+  /* "+" antes de uma variável, converte-a para tipo "number" */
+  if (passwordLength < +MIN || passwordLength > +MAX) {
     alert(`O total de caracteres deve estar entre ${MIN} e ${MAX}.`);
     return;
   }
